@@ -1,0 +1,197 @@
+% resume.tex
+%
+% Layout (c) 2007-2011 Jeremy B. R. Edberg <jedberg@gmail.com> http://www.jedberg.net
+%
+
+% general setup
+\documentclass[12pt]{article}
+\usepackage{enumitem}			% for itemize
+\usepackage{setspace}			% for setstretch
+\usepackage{geometry} 			% for geometry
+\usepackage{verbatim}			% for multi-line comments
+\geometry{letterpaper, twoside}		% sets paper settings (can also be A4)
+\setstretch{0.75}				% adjusts spacing of entire document
+\pagestyle{empty}				% sets page style
+\setlength{\tabcolsep}{0in}		% the space between columns
+
+% section setup
+\newcommand\posthline{.75mm}		% the space between an hline and the next line
+\newcommand\sectionspacing{5mm}	% the space between sections (e.g. UCSD->AMHS, AMHS-> Experience)
+
+% list setup
+\newcommand\topsepsize{0pt}		% the space before and after an itemized list
+\newcommand\listleftmargin{5mm}	% the left margin of the list items
+\newcommand\listlabelsep{2.5mm}	% the space between the bullet and text of a list item
+\newcommand\listitemsep{-1.5mm}	% the space between the list items
+\newcommand\listbullet{\raisebox{0.25ex}{$\bullet$}}		% the size of the bullet, height-centered normal
+%\newcommand\listbullet{\raisebox{0.35ex}{\tiny$\bullet$}}	% the size of the bullet, height-centered tiny
+
+% margin setup
+\oddsidemargin  -0.35in
+\evensidemargin -0.35in
+\textwidth      7.2in
+\headheight    -0.6in
+\topmargin      -0.1in
+%\topmargin      -0.85in
+\textheight=10.7in
+
+\begin{document}
+
+% commenting out sections
+\begin{comment}
+...
+\end{comment}
+
+% header
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
+&\huge{\textbf{\sc{Sumeet Bansal}}}&\\
+Email: s3bansal@ucsd.edu & https://github.com/sumeet-bansal & Mobile: 1 (408) 250-3097\\
+\hline\hline
+\end{tabular*}
+\end{center}
+
+% Education
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large{\sc{Education}}\\
+\hline
+\end{tabular*}
+
+%% UC San Diego (UCSD)
+\vspace{\posthline}
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{University of California, San Diego} & La Jolla, CA \\
+\emph{BS, Intended Computer Science} & \emph{September 2016 to June 2020}
+\end{tabular*}
+{\small Relevant Coursework:}
+\vspace{1mm}		% one-time for spacing out relevant coursework
+
+\small
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llll}
+CSE 11 & Accelerated Introduction to Java &
+MATH 18 & Linear Algebra\\
+CSE 12 & Data Structures and Object-Oriented Design &
+MATH 20C & Calculus and Analytic Geometry\\
+CSE 15L & Software Tools and Techniques & MATH 20D & Differential Equations\\
+CSE 20 & Discrete Mathematics for Computer Science &&
+\end{tabular*}
+
+%% Archbishop Mitty (AMHS)
+\vspace{\sectionspacing}
+\noindent
+\normalsize 		% necessary because tabular previously set to \small for rel. coursework
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Archbishop Mitty High School} & San Jose, CA \\
+\emph{Graduated with Honors} & \emph{August 2012 to May 2016}
+\end{tabular*}
+{\small\noindent
+GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System Design Award, 2015 FIRST Robotics Competition CalGames System Design Award.
+}
+
+% Experience
+\vspace{\sectionspacing}
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large{\sc{Experience}}\\
+\hline
+\end{tabular*}
+
+%% Zscaler
+\vspace{\posthline}
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Zscaler} & San Jose, CA \\
+\emph{Emerging Technologies Intern} & \emph{June 2016 to August 2016} \\
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item Developed an online visualization of global cyberthreats using real-time server data.
+	\item Used jQuery and the Google Maps API to project parsed threat data onto a constantly-updating map.
+\end{itemize}
+
+%% Projects
+\vspace{\sectionspacing}
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large{\sc{Projects}}\\
+\hline
+\end{tabular*}
+
+%% Triton Scheduler
+\vspace{\posthline}
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Triton Scheduler}\\
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item Developing a Python script to easily populate Google Calendars with academic schedule for the quarter.
+	\item Handles SSO login process and site cookies (cookiejar).
+	\item Uses web scraping (BeautifulSoup) to parse and clean schedule data from online class registration tool.
+	\item Adds all academic events to Google Calendar from the registration info via the Google Calendar API.
+\end{itemize}
+
+%% Extracurriculars
+\vspace{\sectionspacing}
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large{\sc{Extracurricular Activities}}\\
+\hline
+\end{tabular*}
+
+%% RANA
+\vspace{\posthline}
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{Rajasthan Association of North America} & San Jose, CA \\
+	\emph{Youth Director} & \emph{February 2015 to February 2016}
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item Served on the Executive Committee and helped organize community outreach and events.
+	\item Developed an online system to easily add people to the organization's mailing list during the most-attended event of the year.
+	\item Contributed code to the website for content and appearance.
+\end{itemize}
+
+%% Robotics Mentor
+\vspace{\sectionspacing}
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{FRC Team 1351 -- TKO} & San Jose, CA \\
+\emph{Mentor, former Project Lead} & \emph{September 2016 to Present}
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item Provided input on robot design, overall team strategy, and software design.
+	\item Participated in design reviews for various robot subsystems and post-competition SWOT analysis.
+\end{itemize}
+
+%% RAFT
+\vspace{\sectionspacing}
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Resource Area for Teachers} & San Jose, CA \\
+\emph{Volunteer} & \emph{August 2010 to May 2016}
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item Created low-budget school projects for teachers to use in classrooms to demonstrate scientific principles.
+	\item Handled accepting and sorting donations.
+	\item Organized the Back to School summer sale.
+\end{itemize}
+
+%% Skills
+\vspace{\sectionspacing}
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}}
+\large{\sc{Skills \& Qualifications}}\\
+\hline
+\end{tabular*}
+
+\vspace{\posthline}
+	\noindent\textbf{Skilled} -- Java, HTML, CSS, Javascript, jQuery, LaTeX, Git, CAD, Hindi\\
+	\noindent\textbf{Proficient} -- Python, C, MATLAB, SQL
+\end{document}
