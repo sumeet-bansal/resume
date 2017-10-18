@@ -6,31 +6,31 @@
 % general setup
 \documentclass[12pt]{article}
 \usepackage{enumitem}			% for itemize
-\usepackage{setspace}			% for setstretch
+\usepackage{setspace}				% for setstretch
 \usepackage{geometry} 			% for geometry
-\usepackage{verbatim}			% for multi-line comments
-\geometry{letterpaper, twoside}		% sets paper settings (can also be A4)
-\setstretch{0.75}				% adjusts spacing of entire document
-\pagestyle{empty}				% sets page style
+\usepackage{verbatim}				% for multi-line comments
+\geometry{letterpaper, twoside}		% sets paper settings (can also be a4paper)
+\setstretch{0.75}						% adjusts spacing of entire document
+\pagestyle{empty}						% sets page style
 \setlength{\tabcolsep}{0in}		% the space between columns
 
 % section setup
-\newcommand\posthline{.75mm}		% the space between an hline and the next line
+\newcommand\posthline{.5mm}		% the space between an hline and the next line
 \newcommand\sectionspacing{2mm}	% the space between sections (e.g. UCSD->AMHS, AMHS-> Experience)
 
 % list setup
-\newcommand\topsepsize{0pt}		% the space before and after an itemized list
+\newcommand\topsepsize{0pt}			% the space before and after an itemized list
 \newcommand\listleftmargin{5mm}	% the left margin of the list items
 \newcommand\listlabelsep{2.5mm}	% the space between the bullet and text of a list item
 \newcommand\listitemsep{-1.5mm}	% the space between the list items
-\newcommand\listbullet{\raisebox{0.25ex}{$\bullet$}}		% the size of the bullet, height-centered normal
-%\newcommand\listbullet{\raisebox{0.35ex}{\tiny$\bullet$}}	% the size of the bullet, height-centered tiny
+\newcommand\listbullet{\raisebox{0.25ex}{$\bullet$}}				% the size of the bullet, height-centered normal
+%\newcommand\listbullet{\raisebox{0.35ex}{\tiny$\bullet$}}		% the size of the bullet, height-centered tiny
 
 % margin setup
-\oddsidemargin  -0.35in
-\evensidemargin -0.35in
-\textwidth      7.2in
-\headheight    -0.75in
+\oddsidemargin  -0.4in
+\evensidemargin -0.4in
+\textwidth      7.3in
+\headheight    -1.05in
 \topmargin      -0.1in
 %\topmargin      -0.85in
 \textheight=10.7in
@@ -46,7 +46,7 @@
 \begin{center}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
 &\huge{\textbf{\sc{Sumeet Bansal}}}&\\
-Email: s3bansal@ucsd.edu & https://github.com/sumeet-bansal & Mobile: 1 (408) 250-3097\\
+Email: s3bansal@ucsd.edu & https://www.linkedin.com/in/s-bansal/ & Mobile: 1 (408) 250-3097\\
 \hline\hline
 \end{tabular*}
 \end{center}
@@ -63,7 +63,7 @@ Email: s3bansal@ucsd.edu & https://github.com/sumeet-bansal & Mobile: 1 (408) 25
 \noindent 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{University of California, San Diego} & La Jolla, CA \\
-\emph{BS, Intended Computer Science} & \emph{September 2016 to June 2020}
+\emph{BS, Mathematics-Computer Science} & \emph{September 2016 to June 2020}
 \end{tabular*}
 {\small Relevant Coursework:}
 \vspace{1mm}		% one-time for spacing out relevant coursework
@@ -71,12 +71,12 @@ Email: s3bansal@ucsd.edu & https://github.com/sumeet-bansal & Mobile: 1 (408) 25
 \small
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llll}
-CSE 11 & Accelerated Introduction to Java &
-MATH 18 & Linear Algebra\\
-CSE 12 & Data Structures and Object-Oriented Design &
-MATH 20C & Calculus and Analytic Geometry\\
-CSE 15L & Software Tools and Techniques & MATH 20D & Differential Equations\\
-CSE 20 & Discrete Mathematics for Computer Science &&
+CSE 11 & \footnotesize Accelerated Introduction to Java &
+CSE 20 & \footnotesize Discrete Mathematics for Computer Science \\
+CSE 12 & \footnotesize Data Structures and Object-Oriented Design &
+CSE 21 & \footnotesize Mathematics for Algorithms and Systems \\
+CSE 15L & \footnotesize Software Tools and Techniques &
+CSE 30 & \footnotesize Computer Organization and Systems Programming \\
 \end{tabular*}
 
 %% Archbishop Mitty (AMHS)
@@ -104,17 +104,19 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 \noindent 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Actiance} & Redwood City, CA \\
-\emph{Engineering R\&D Intern} & \emph{June 2017 to September 2017} \\
+\emph{Engineering R\&D and Product Management Intern} & \emph{June 2017 to September 2017} \\
 \end{tabular*}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
-	\item Worked directly on the Rhine release of the Alcatraz platform.
-	\item Developed an independent project that ensures parity across server configurations.
-	\item Significantly shortened development cycles through a platform-specific suite of diagnostic tools.
-%	\item Automated the processes of generating .properties files for ZooKeeper-based server setups and extracting scattered configuration files from development environments into a standardized directory structure.
-	\item Created a flexible MongoDB-based query engine that generates detailed statistical server diagnostics.
-	\item Integrated the query engine with an interactive web front-end to simplify and visualize the analytic process.
-	\item Oversaw company-wide deployment and adoption across different teams (e.g. engineering, network operations) domestically and internationally (e.g. the Bangalore team).
+%	\item Verified QA testing for the Rhine release of the Alcatraz platform.
+	\item Led a team of three interns in developing an independent project (https://git.io/vd0Wi).
+	\item Developed a diagnostic service that significantly shortened development and deployment cycles by ensuring parity across multiple product sites' server configurations.
+	\item Automated processes for generating data stores of entire product sites' server configurations.
+	\item Created a flexible MongoDB-based query engine that generates detailed statistical server analyses and later migrated the entire project to a fully functional SQL-based implementation.
+	\item Integrated the query engine with a responsive web interface using AngularJS interacting with a Java servlet.
+	\item Oversaw company-wide deployment and adoption across different teams, domestic and international (e.g. Engineering, Network Operations, QA).
+	\item Presented well-received demos to many senior executives, including the CEO. Incorporated feedback and added requested functionality for specific use cases.
+	\item Worked with Program Management to migrate programs to the BigPicture application for improved risk assessment, swim lane progress updates and milestone planning.
 \end{itemize}
 
 %% Zscaler
@@ -139,18 +141,30 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 \hline
 \end{tabular*}
 
-%% Triton Scheduler
+%% last.fm explorer
 \vspace{\posthline}
 \noindent 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-\textbf{Triton Scheduler}\\
+\textbf{Last.fm Spelunker} & \textit{https://git.io/vd0WS}\\
 \end{tabular*}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
-	\item Developing a Python script to easily populate Google Calendars with academic schedule for the quarter.
-	\item Handles SSO login process and site cookies (cookiejar).
-	\item Uses web scraping (BeautifulSoup) to parse and clean schedule data from online class registration tool.
-	\item Adds all academic events to Google Calendar from the registration info via the Google Calendar API.
+	\item Generates an exhaustive SQL database of the user's scrobbles and any related info (e.g. data for scrobbled songs or artists) through the last.fm API.
+	\item Identifes historical patterns in listening habits and uses the D3.js data visualization library to graph scrobble statistics.
+\end{itemize}
+
+%% Triton Scheduler
+\vspace{\sectionspacing}
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Triton Scheduler} & \textit{https://git.io/vd0WQ}\\
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item A Chrome extension to easily populate Google Calendars with academic schedule for the quarter.
+	\item Uses web scraping to parse and clean schedule data from the online WebReg class registration tool.
+	\item Handles the user authentication and authorization process through the OAuth 2.0 protocol.
+	\item Adds all academic events from the registration tool to Google Calendar via the Google Calendar API.
 \end{itemize}
 
 %% Extracurriculars
@@ -161,22 +175,8 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 \hline
 \end{tabular*}
 
-%% RANA
-\vspace{\posthline}
-\noindent 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{Rajasthan Association of North America} & San Jose, CA \\
-	\emph{Youth Director} & \emph{February 2015 to February 2016}
-\end{tabular*}
-\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
-	\small
-	\item Served on the Executive Committee and helped organize community outreach and events.
-	\item Developed an online system to easily add people to the organization's mailing list during the most-attended event of the year.
-	\item Contributed code to the website for content and appearance.
-\end{itemize}
-
 %% Robotics Mentor
-\vspace{\sectionspacing}
+\vspace{\posthline}
 \noindent 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{FRC Team 1351 -- TKO} & San Jose, CA \\
@@ -186,9 +186,11 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 	\small
 	\item Provided input on robot design, overall team strategy, and software design.
 	\item Participated in design reviews for various robot subsystems and post-competition SWOT analysis.
+	\item While a project lead, managed several team members, had complete autonomy in designing multiple vital subsystems, and had significant input on high-level design and strategy as a core member.
 \end{itemize}
 
 %% RAFT
+\begin{comment}
 \vspace{\sectionspacing}
 \noindent 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -201,6 +203,20 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 	\item Handled accepting and sorting donations.
 	\item Organized the Back to School summer sale.
 \end{itemize}
+\end{comment}
+
+%% RANA
+\vspace{\sectionspacing}
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{Rajasthan Association of North America} & San Jose, CA \\
+	\emph{Youth Director} & \emph{February 2015 to February 2016}
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item Served on the Executive Committee and helped organize community outreach and events.
+	\item Developed an online system to easily add people to the organization's mailing list during the most-attended event of the year. Contributed code to the website for content and appearance.
+\end{itemize}
 
 %% Skills
 \vspace{\sectionspacing}
@@ -211,6 +227,6 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 \end{tabular*}
 
 \vspace{\posthline}
-	\noindent\textbf{Skilled} -- Java, HTML, CSS, Javascript, jQuery, LaTeX, Git, CAD, Hindi\\
-	\noindent\textbf{Proficient} -- Python, C, MATLAB, SQL
+	\noindent\textbf{Skilled} -- Java, SQL, MongoDB, HTML, CSS, Javascript, jQuery, LaTeX, Git\\
+	\noindent\textbf{Proficient} -- Python, C, MATLAB, R, ARM Assembly
 \end{document}
