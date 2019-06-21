@@ -31,7 +31,7 @@
 \evensidemargin -0.4in
 \textwidth      7.3in
 \headheight    -1.05in
-\topmargin      -0.1in
+\topmargin      0.15in
 %\topmargin      -0.85in
 \textheight=10.7in
 
@@ -60,7 +60,7 @@ Email: s3bansal@ucsd.edu & https://www.linkedin.com/in/s-bansal/ & Mobile: 1 (40
 
 %% UC San Diego (UCSD)
 \vspace{\posthline}
-\noindent 
+\noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{University of California, San Diego} & La Jolla, CA \\
 \emph{B.S., Computer Science; Minor in Mathematics.} & \emph{June 2020}
@@ -107,9 +107,21 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 \hline
 \end{tabular*}
 
-%% IBM Watson Health
+%% Palantir
 \vspace{\posthline}
-\noindent 
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Palantir} & New York City, NY \\
+\emph{Software Engineer Intern} & \emph{June 2019 to September 2019} \\
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item Foundry - Analytics Group - Functions on Objects.
+\end{itemize}
+
+%% IBM Watson Health
+\vspace{\sectionspacing}
+\noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{IBM Watson Health} & Milwaukee, WI \\
 \emph{Software Developer Intern} & \emph{June 2018 to September 2018} \\
@@ -134,10 +146,10 @@ Intern} & \emph{June 2017 to September 2017} \\
 	\small
 %	\item Verified QA testing for the Rhine release of the Alcatraz platform.
 	\item Led a team of three interns in developing an independent anomaly detection project (https://git.io/vd0Wi).
-	\item Developed a diagnostic service that significantly shortened development and deployment cycles by ensuring parity across multiple product sites' server configurations.
+	\item Developed and shipped a diagnostic service that's currently used in production to significantly shorten development and deployment cycles by ensuring parity across multiple product sites' server configurations.
 %	\item Automated processes for generating data stores of entire product sites' server configurations.
 	\item Created a flexible MongoDB-based query engine that generates detailed statistical server analyses and later migrated the entire project to a fully functional SQL-based implementation.
-	\item Integrated the query engine with a responsive web interface using AngularJS interacting with a Java servlet.
+	\item Extended the tool into a REST API using Spring Boot and developed an online dashboard using Angular.
 %	\item Oversaw company-wide deployment and adoption across different teams, domestic and international (e.g. Engineering, Network Operations, QA).
 	\item Presented well-received demos to many senior executives, including the CEO. % Incorporated feedback and added requested functionality for specific use cases.
 %	\item Worked with Program Management to migrate programs to the BigPicture application for improved risk assessment, swim lane progress updates and milestone planning.
@@ -145,7 +157,7 @@ Intern} & \emph{June 2017 to September 2017} \\
 
 %% Zscaler
 \vspace{\sectionspacing}
-\noindent 
+\noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Zscaler} & San Jose, CA \\
 \emph{Emerging Technologies Intern} & \emph{June 2015 to August 2015} \\
@@ -167,7 +179,7 @@ Intern} & \emph{June 2017 to September 2017} \\
 
 %% last.fm explorer
 \vspace{\posthline}
-\noindent 
+\noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Last.fm Spelunker} & \textit{https://git.io/vd0WS}\\
 \end{tabular*}
@@ -181,7 +193,7 @@ Intern} & \emph{June 2017 to September 2017} \\
 %% Triton Scheduler
 \begin{comment}
 \vspace{\sectionspacing}
-\noindent 
+\noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Triton Scheduler} & \textit{https://git.io/vd0WQ}\\
 \end{tabular*}
@@ -203,6 +215,7 @@ Intern} & \emph{June 2017 to September 2017} \\
 \end{tabular*}
 
 %% SEDS
+\begin{comment}
 \vspace{\posthline}
 \noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -211,8 +224,8 @@ Intern} & \emph{June 2017 to September 2017} \\
 \end{tabular*}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
-	\item Responsible for the design and maintenance of the organization's website (sedsucsd.org) and internal content management system.
-	\item Integrating a conference registration and management system with the site to manage a conference with an expected attendance of several hundred.
+	\item Responsible for the design and maintenance of the organization's website (sedsucsd.org) and internal member portal.
+	\item Integrated a conference registration and management system with the site to manage a conference with an attendance of several hundred.
 \end{itemize}
 \vspace{\posthline}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -220,23 +233,25 @@ Intern} & \emph{June 2017 to September 2017} \\
 \end{tabular*}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
-	\item Member of the Colossus project, a NASA-funded static fire test stand having a net worth of \$330,000.
-	\item Worked on the data acquisition system to automate the sequence of actions required to obtain reliable thrust readings, design a highly-redudant system with numerous background and safety checks, and develop data loggers, a dedicated analytics platform, and a responsive user interface.
-%	\item Set up a web server and local website to enable real-time monitoring of the Colossus system.
+	\item Member of the data acquisition team on the Colossus project, a NASA-funded static fire test stand having a net worth of \$330,000.
+	\item Automated the sequence of actions required to obtain reliable thrust readings, designed a highly-redudant system with numerous background and safety checks, and developed data loggers, a dedicated analytics platform, and a responsive web interface to enable real-time monitoring of the Colossus system.
 \end{itemize}
+\end{comment}
 
 %% TSE
 \vspace{\sectionspacing}
-\noindent 
+\noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Triton Software Engineering} & San Diego, CA \\
 \emph{President} & \emph{May 2018 to Present}
 \end{tabular*}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
-	\item Partner with non-profits to engineer solutions for unique organizational needs and expand reach and impact.
-	\item Manage day-to-day administration and oversee the specification, development, and execution of each project.
-	\item Pushing teams to adopt a more multidisciplinary approach with greater emphasis on human-centered design.
+	\item Managed logistics, rebranded and defined the vision, created a growth strategy for an interdisciplinary 40-person student org that designs and develops pro-bono technology resources (e.g. web and mobile applications) for non-profits.
+	\item Established partnerships with local non-profits, social enterprise venture firms, and industry professionals.
+	\item Pushed the adoption of industry-standard development practices (e.g. proper Git workflows with code reviews, CICD/tooling, style guides) and a more multidisciplinary development approach with a greater emphasis on human-centered design.
+	\item Established a scalable tech infrastructure using AWS and a system for regular management and technical check-ins with individual teams.
+	\item Designed specifications and architectures for multiple projects.
 \end{itemize}
 \vspace{\posthline}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -246,8 +261,8 @@ Intern} & \emph{June 2017 to September 2017} \\
 	\small
 	\item Led a team of student developers in implementing projects for social good; followed Agile methodology.
 %	\item Created a structured lesson plan to teach team members web development with the MEAN stack.
-	\item Developed a medical records system for a pop-up health clinic program in low-resource areas (e.g. Tijuana).
-	\item Created a market evaluation tool for community stakeholders and ethnic grocers to improve the urban food environment in San Diego.
+%	\item Developed a medical records system for a pop-up health clinic program in low-resource areas (e.g. Tijuana).
+%	\item Created a market evaluation tool for community stakeholders and ethnic grocers to improve the urban food environment in San Diego.
 \end{itemize}
 
 %% FRC
@@ -269,7 +284,7 @@ Intern} & \emph{June 2017 to September 2017} \\
 %% RAFT
 \begin{comment}
 \vspace{\sectionspacing}
-\noindent 
+\noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Resource Area for Teachers} & San Jose, CA \\
 \emph{Volunteer} & \emph{August 2010 to May 2016}
