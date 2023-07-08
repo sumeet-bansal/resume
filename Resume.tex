@@ -9,17 +9,23 @@
 \usepackage{setspace}				% for setstretch
 \usepackage{geometry} 			% for geometry
 \usepackage{verbatim}				% for multi-line comments
+\usepackage{hyperref}
 \geometry{letterpaper, twoside}		% sets paper settings (can also be a4paper)
 \setstretch{0.75}						% adjusts spacing of entire document
 \pagestyle{empty}						% sets page style
 \setlength{\tabcolsep}{0in}		% the space between columns
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
 
 % section setup
-\newcommand\posthline{.5mm}		% the space between an hline and the next line
-\newcommand\sectionspacing{1.5mm}	% the space between sections (e.g. UCSD->AMHS, AMHS-> Experience)
+\newcommand\posthline{1.5mm}		% the space between an hline and the next line
+\newcommand\sectionspacing{3mm}	% the space between sections (e.g. UCSD->AMHS, AMHS-> Experience)
 
 % list setup
-\newcommand\topsepsize{0pt}			% the space before and after an itemized list
+\newcommand\topsepsize{5pt}			% the space before and after an itemized list
 \newcommand\listleftmargin{5mm}	% the left margin of the list items
 \newcommand\listlabelsep{2.5mm}	% the space between the bullet and text of a list item
 \newcommand\listitemsep{-1.5mm}	% the space between the list items
@@ -46,7 +52,7 @@
 \begin{center}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
 &\huge{\textbf{\sc{Sumeet Bansal}}}&\\
-LinkedIn: s-bansal & Email: s3bansal@ucsd.edu & GitHub: sumeet-bansal\\
+LinkedIn: s-bansal & Email: sumeetbansal@gmail.com & GitHub: sumeet-bansal\\
 \hline\hline
 \end{tabular*}
 \end{center}
@@ -126,13 +132,29 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 \noindent 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{Palantir} & New York, NY \\
+\emph{Software Engineer} & \emph{May 2020 to Present} \\
+\end{tabular*}
+\begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
+	\small
+	\item The \href{https://www.palantir.com/docs/foundry/time-series/time-series-overview}{time series} team is responsible for ingesting large datasets (up to tens of Terabytes each) containing millions of unique time series and enabling users to execute complex queries composed of transforms and aggregations against those time series within seconds.
+	\item The team supports business-critical workflows at many global institutions including British Petroleum, Airbus, the CDC and Britain’s National Health Service. For example, Airbus instruments its aircraft with thousands of sensors recording measurements at millisecond frequency, for every flight, across their fleet, and uses our time series product to manage that volume of sensor data and plan preventative aircraft maintenance. Clients frequently use time series to monitor the health of their assets in real-time, e.g. British Petroleum and its energy platforms, several national health agencies and their COVID responses.
+	\item I worked extensively across the team’s stack: multiple Java services, a Rust service, a Python library, and a Typescript/React front-end.
+	\item Owned streaming workflows for time series, a functionality most in demand for from current and prospective customers. The architecture for streaming workflows barely existed as a skeleton; I shipped tens of thousands of lines of code to production, wrote documentation, added monitoring and alerting, collaborated with early adopters to iron out issues and address pain points, released the feature, and enabled our largest customer to migrate from their custom streaming solution. As clients scaled their streaming usage, I profiled and analyzed runtime to improve stability (e.g. memory usage) and optimize performance.
+	\item Enabled usage-based pricing for time series and unlocked millions of dollars in new contract value by implementing compute reporting for time series services and updating all significant time series clients in the Foundry platform one-by-one to pass along compute attribution to time series.
+	\item Reduced cloud costs by several hundred thousand dollars annually by picking up the team’s effort to build the next-generation of time series architecture, which would be more tightly integrated with the Foundry platform and write orders of magnitude less data, eliminating the need for Cassandra clusters dedicated to time series on nearly all customer deployments.
+	\item Contributed to our team’s support rotation, where I responded to pages and investigated and fixed time series issues in the field, such as security vulnerabilities, product bugs, configuration errors, performance issues, and complex system failures. I closed >1000 pages. While on support, we were responsible for maintaining strict SLAs across dozens of customer deployments.
+\end{itemize}
+
+%% Palantir
+\vspace{\posthline}
+\noindent 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \emph{Software Engineer Intern} & \emph{June 2019 to September 2019} \\
 \end{tabular*}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
-	\item Worked on a more expressive layer on top of Foundry, Palantir's enterprise-focused data integration and analytics platform, where users can write and publish custom TypeScript functions against Foundry objects.
-	\item Designed and implemented a permissioned registry service to store function metadata and specifications (e.g. documentation, input/output data types, location of function code) and search for published functions in Java using Cassandra and Elasticsearch.
-	\item Developed a custom TypeScript logger conforming to the internal service specification.
+	\item Worked on a a permissioned registry service to store user-authored code called Functions, and Function metadata and specifications (e.g. documentation, input/output data types, location of Function code). Designed and implemented search for published Functions in Java using Cassandra and Elasticsearch.
+	\item Developed a custom TypeScript logger conforming to the internal service specification, e.g. integration with internal authentication service, tracing by Function execution context, support for log rotation.
 \end{itemize}
 
 %% IBM Watson Health
@@ -142,6 +164,7 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 \textbf{IBM Watson Health} & Milwaukee, WI \\
 \emph{Software Developer Intern} & \emph{June 2018 to September 2018} \\
 \end{tabular*}
+\begin{comment}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
 	\item Reworked continuous integration system to include automated remote unit testing and brought test harness up to federal standards.
@@ -149,6 +172,7 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 	\item Developed a data transformation tool for patient data to fix a critical compatibility issue in production.
 	\item Designed a proof-of-concept blockchain with the premise of smart contracts for pharmaceutical prescriptions.
 \end{itemize}
+\end{comment}
 
 %% Actiance
 \vspace{\sectionspacing}
@@ -158,6 +182,7 @@ GPA: 4.14. SAT: 2260. Awards: 2013 FIRST Robotics Competition CalGames System De
 \emph{Engineering R\&D %and Product Management
 Intern} & \emph{June 2017 to September 2017} \\
 \end{tabular*}
+\begin{comment}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
 %	\item Verified QA testing for the Rhine release of the Alcatraz platform.
@@ -170,6 +195,7 @@ Intern} & \emph{June 2017 to September 2017} \\
 	\item Presented well-received demos to many senior executives, including the CEO. % Incorporated feedback and added requested functionality for specific use cases.
 %	\item Worked with Program Management to migrate programs to the BigPicture application for improved risk assessment, swim lane progress updates and milestone planning.
 \end{itemize}
+\end{comment}
 
 %% Zscaler
 \vspace{\sectionspacing}
@@ -178,12 +204,15 @@ Intern} & \emph{June 2017 to September 2017} \\
 \textbf{Zscaler} & San Jose, CA \\
 \emph{Emerging Technologies Intern} & \emph{June 2015 to August 2015} \\
 \end{tabular*}
+\begin{comment}
 \begin{itemize}[leftmargin=\listleftmargin, labelsep=\listlabelsep, itemsep=\listitemsep, label=\listbullet, topsep=\topsepsize]
 	\small
 	\item Classified and prioritized global cyberthreats from incoming production server data streams.
 	\item Projected the parsed cyberthreat data onto a real-time web visualization using the Google Maps API.
 \end{itemize}
+\end{comment}
 
+\begin{comment}
 %% Projects
 \vspace{\sectionspacing}
 \noindent
@@ -206,7 +235,6 @@ Intern} & \emph{June 2017 to September 2017} \\
 \end{itemize}
 
 %% Triton Scheduler
-\begin{comment}
 \vspace{\sectionspacing}
 \noindent 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -219,7 +247,6 @@ Intern} & \emph{June 2017 to September 2017} \\
 	\item Handles the user authentication and authorization process through the OAuth 2.0 protocol.
 	\item Adds all academic events from the registration tool to Google Calendar via the Google Calendar API.
 \end{itemize}
-\end{comment}
 
 %% Extracurriculars
 \vspace{\sectionspacing}
@@ -230,7 +257,6 @@ Intern} & \emph{June 2017 to September 2017} \\
 \end{tabular*}
 
 %% SEDS
-\begin{comment}
 \vspace{\posthline}
 \noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -251,7 +277,6 @@ Intern} & \emph{June 2017 to September 2017} \\
 	\item Member of the data acquisition team on the Colossus project, a NASA-funded static fire test stand having a net worth of \$330,000.
 	\item Automated the sequence of actions required to obtain reliable thrust readings, designed a highly-redudant system with numerous background and safety checks, and developed data loggers, a dedicated analytics platform, and a responsive web interface to enable real-time monitoring of the Colossus system.
 \end{itemize}
-\end{comment}
 
 %% TSE
 \vspace{\sectionspacing}
@@ -268,7 +293,6 @@ Intern} & \emph{June 2017 to September 2017} \\
 	\item Established a scalable tech infrastructure using AWS and a system for regular management and technical check-ins with individual teams.
 	\item Gathered specifications for, architected, and worked on multiple projects ranging from a geographic data infrastructure for a nationally distributed network of food sources and food banks to an electronic patient records system for medical clinics in low-resource areas of Tijuana and Guadalajara.
 \end{itemize}
-\begin{comment}
 \vspace{\posthline}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \emph{Project Manager} & \emph{January 2018 to June 2018}
@@ -280,10 +304,8 @@ Intern} & \emph{June 2017 to September 2017} \\
 %	\item Developed a medical records system for a pop-up health clinic program in low-resource areas (e.g. Tijuana).
 %	\item Created a market evaluation tool for community stakeholders and ethnic grocers to improve the urban food environment in San Diego.
 \end{itemize}
-\end{comment}
 
 %% FRC
-\begin{comment}
 \vspace{\sectionspacing}
 \noindent
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -296,10 +318,8 @@ Intern} & \emph{June 2017 to September 2017} \\
 	\item Participated in design reviews for various robot subsystems and post-competition SWOT analysis.
 	\item While a project lead, managed several team members, had complete autonomy in designing multiple vital subsystems, and had significant input on high-level design and strategy as a core member.
 \end{itemize}
-\end{comment}
 
 %% RAFT
-\begin{comment}
 \vspace{\sectionspacing}
 \noindent 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -312,9 +332,7 @@ Intern} & \emph{June 2017 to September 2017} \\
 	\item Handled accepting and sorting donations.
 	\item Organized the Back to School summer sale.
 \end{itemize}
-\end{comment}
 
-\begin{comment}
 %% RANA
 \vspace{\sectionspacing}
 \noindent
