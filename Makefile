@@ -3,7 +3,7 @@
 default: pdf
 
 pdf: Resume.tex
-	pdflatex Resume.tex
+	tectonic Resume.tex
 
 clean:
 	rm -f *.aux *.log *.out *.synctex.gz
